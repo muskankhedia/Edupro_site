@@ -1806,3 +1806,15 @@ padding-top: 3px;
 }
 
  
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+.img-profile {
+  max-width: 10rem;
+  max-height: 10rem;}
+
+.mb-3,.my-3 {
+  margin-left: 3rem !important;
+  margin-top: 7rem !important;
+}
