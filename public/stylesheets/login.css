@@ -98,3 +98,16 @@ body {
 	background-color: #1CA347;
 	border-color: #1CA347;
 }
+
+label#bb{
+    padding: 10px;
+    background: red; 
+    display: table;
+    color: #fff;
+     }
+
+
+
+input[type="file"] {
+    display: none;
+}

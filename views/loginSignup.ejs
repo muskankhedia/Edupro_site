@@ -5,9 +5,9 @@
     <title>Edupro! Wonder-Explore-Innovate</title>
     <link href="/stylesheets/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="/stylesheets/login.css" rel="stylesheet" id="bootstrap-css">
-	<script src="/javascripts/jquery.js"></script>
-	<script type="text/javascript" src="/serverJs/login.js"></script>
-	<!------ Include the above in your HEAD tag ---------->
+    <script src="/javascripts/jquery.js"></script>
+    <script type="text/javascript" src="/serverJs/login.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
 </head>
 
 <body>
@@ -15,13 +15,13 @@
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <div class="panel panel-login">
-                	<div class="panel-heading">
-                		<div class="row" style="margin-bottom: 30px;float: center;margin-left: 33%;">
-                    		<a class="navbar-brand" href="index.html" style="color: #ef801a"><img src="/images/logo.png" alt="logo"/>Edupro</a>
-                    	</div>
-                	</div>
                     <div class="panel-heading">
-                    	<br>
+                        <div class="row" style="margin-bottom: 30px;float: center;margin-left: 33%;">
+                            <a class="navbar-brand" href="index.html" style="color: #ef801a"><img src="/images/logo.png" alt="logo"/>Edupro</a>
+                        </div>
+                    </div>
+                    <div class="panel-heading">
+                        <br>
                         <div class="row">
                             <div class="col-xs-6">
                                 <a href="#" class="active" id="login-form-link">Login</a>
@@ -54,7 +54,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-group">
+                                    <!-- <div class="form-group">
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="text-center">
@@ -62,9 +62,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </form>
-                                <form id="register-form" action="https://phpoll.com/register/process" method="post" role="form" style="display: none;">
+                                <form id="register-form" action="/signup" method="post" role="form" style="display: none;">
                                     <div class="form-group">
                                         <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
                                     </div>
@@ -74,29 +74,31 @@
                                     <div class="form-group">
                                         <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
                                     </div>
-                                    <div class="form-group">
+                                    <!-- <div class="form-group">
                                         <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
-                                    </div>
-
+                                    </div> -->
                                     <div class="form-group">
-                                            <input type="text" name="git_link" id="git_link" tabindex="2" class="form-control" placeholder="Github Link">
+                                        <input type="text" name="git_link" id="git_link" tabindex="2" class="form-control" placeholder="Institute Name">
                                     </div>
-
                                     <div class="form-group">
-                                           <input type="text" name="linkedin_link" id="linkedin_link" tabindex="2" class="form-control" placeholder="LinkedIn Link">
+                                        <input type="text" name="git_link" id="git_link" tabindex="2" class="form-control" placeholder="Github Link">
                                     </div>
-
-                                    <div class ="form-group">
+                                    <div class="form-group">
+                                        <input type="text" name="linkedin_link" id="linkedin_link" tabindex="2" class="form-control" placeholder="LinkedIn Link">
+                                    </div>
+                                    <div class="form-group">
                                         <div style="border:solid 1px; border-radius: 0.5em;padding:7px; border-color:antiquewhite;">
-                                            <label class="radio-inline"><input type="radio" name="gender" value="male" checked>Male</label>
-                                            <label class="radio-inline"><input type="radio" name="gender" value="female">Female</label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="gender" value="male" checked>Male</label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="gender" value="female">Female</label>
                                         </div>
                                     </div>
-                                    
-
                                     <div class="form-group">
                                         <div style="border:solid 1px; border-radius: 0.5em;padding:7px; border-color:antiquewhite;">
-                                            <input type="file" name="fileupload" value="fileupload" id="fileupload"  >  <label for="fileupload"> Select a profile photo to upload</label> <br> 
+                                            <label id="#bb"> Enter Your File
+                                                <input type="file" id="File" size="60">
+                                            </label>
                                         </div>
                                     </div>
                                     <div>
