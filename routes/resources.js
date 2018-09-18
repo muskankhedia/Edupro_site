@@ -7,4 +7,8 @@ router.get('/',(req,res) =>{
     res.render('resources')
 });
 
+router.get('/articles',(req,res) =>{
+    res.render('articles')
+});
+
 module.exports = router;
