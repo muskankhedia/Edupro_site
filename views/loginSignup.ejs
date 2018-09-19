@@ -54,17 +54,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="text-center">
-                                                    <a href="https://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> -->
                                 </form>
-                                <form id="register-form" action="/signup" method="post" role="form" style="display: none;">
+
+
+
+                                
+                                <form id="signupform" action="/signup/register" method="post" role="form" style="display: none;" enctype="multipart/form-data">
                                     <div class="form-group">
                                         <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
                                     </div>
@@ -74,11 +69,8 @@
                                     <div class="form-group">
                                         <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
                                     </div>
-                                    <!-- <div class="form-group">
-                                        <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
-                                    </div> -->
                                     <div class="form-group">
-                                        <input type="text" name="git_link" id="git_link" tabindex="2" class="form-control" placeholder="Institute Name">
+                                        <input type="text" name="institute" id="institute" tabindex="2" class="form-control" placeholder="Institute Name">
                                     </div>
                                     <div class="form-group">
                                         <input type="text" name="git_link" id="git_link" tabindex="2" class="form-control" placeholder="Github Link">
@@ -97,15 +89,16 @@
                                     <div class="form-group">
                                         <div style="border:solid 1px; border-radius: 0.5em;padding:7px; border-color:antiquewhite;">
                                             <label id="#bb"> Enter Your File
-                                                <input type="file" id="File" size="60">
+                                                <input type="file" name="files" size="60" value="" id='image' onchange="readURL(this);">
                                             </label>
                                         </div>
                                     </div>
                                     <div>
                                         <div class="row">
                                             <div class="col-sm-6 col-sm-offset-3">
-                                                <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
-                                            </div>
+                                                <input type="submit" class="form-control btn btn-register" value="Register Now">
+                                                <p style="margin-bottom:15px;" class="signmsg"  ></p
+>                                            </div>
                                         </div>
                                     </div>
                                 </form>
