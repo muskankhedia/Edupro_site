@@ -14,8 +14,12 @@
 <link href="/stylesheets/style.css" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel = "stylesheet" href = "/stylesheets/owl.carousel.min.css">
+<link href="stylesheets/blog-post.css" rel="stylesheet">
 <link rel = "stylesheet" href="/stylesheets/owl.theme.default.min.css">
+
+
 <style type = "text/css">
+
 		.wrapper{
 				
 				width:100%;
@@ -339,6 +343,13 @@
 .ui-btn .ui-text {
     margin: 0 5px;
 }
+.profile_photo{
+	border-radius: 50%;
+}
+
+.modal-dialog{
+        width: 80%;
+}
 </style>
  
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -365,7 +376,9 @@
                         <li><a href="/contact">Contact</a></li>
 						<li><a href="/login"><button class = "btn btn-danger" style= "visibility:show;">Register/Login</button></a></li>
 						<li class = "dropdown">
-						<a href="#" data-toggle="dropdown" class="dropdown-toggle" style="visibility:hidden; display:none" >Photo</a>
+						<a href="#" data-toggle="dropdown" class="dropdown-toggle" style="visibility:show; display:show;" >
+								<img src="cinqueterre.jpg" class="img-circle" alt="Cinque Terre" style="background-color: white;width:2px;height:2px;">
+						</a>
 						<ul class= "dropdown-menu">
 						<li><a href="/about">My profile</a></li>
                             <!-- <li><a href="#">Our Team</a></li>
@@ -427,7 +440,7 @@
 									<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 									<div class="d-flex justify-content-between align-items-center">
 									  <div class="btn-group">
-										<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+										<button type="button" class="btn btn-sm btn-outline-secondary"  data-toggle="modal" data-target="#view">View</button>
 									  </div>
 									  <small class="text-muted">9 mins</small>
 									</div>
@@ -441,7 +454,7 @@
 									<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 									<div class="d-flex justify-content-between align-items-center">
 									  <div class="btn-group">
-										<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+										<button type="button" class="btn btn-sm btn-outline-secondary "  data-toggle="modal" data-target="#view">View</button>
 									  </div>
 									  <small class="text-muted">9 mins</small>
 									</div>
@@ -455,7 +468,7 @@
 									<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 									<div class="d-flex justify-content-between align-items-center">
 									  <div class="btn-group">
-										<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+										<button type="button" class="btn btn-sm btn-outline-secondary"  data-toggle="modal" data-target="#view">View</button>
 									  </div>
 									  <small class="text-muted">9 mins</small>
 									</div>
@@ -469,7 +482,7 @@
 									<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 									<div class="d-flex justify-content-between align-items-center">
 									  <div class="btn-group">
-										<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+										<button type="button" class="btn btn-sm btn-outline-secondary"  data-toggle="modal" data-target="#view">View</button>
 									  </div>
 									  <small class="text-muted">9 mins</small>
 									</div>
@@ -483,7 +496,7 @@
 									<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 									<div class="d-flex justify-content-between align-items-center">
 									  <div class="btn-group">
-										<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+										<button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#view">View</button>
 									  </div>
 									  <small class="text-muted">9 mins</small>
 									</div>
@@ -497,7 +510,7 @@
 									<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 									<div class="d-flex justify-content-between align-items-center">
 									  <div class="btn-group">
-										<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+										<button type="button" class="btn btn-sm btn-outline-secondary"  data-toggle="modal" data-target="#view">View</button>
 									  </div>
 									  <small class="text-muted">9 mins</small>
 									</div>
@@ -511,7 +524,7 @@
 									<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 									<div class="d-flex justify-content-between align-items-center">
 									  <div class="btn-group">
-										<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+										<button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#view">View</button>
 									  </div>
 									  <small class="text-muted">9 mins</small>
 									</div>
@@ -530,22 +543,140 @@
 
 
 	<section id="content">
-	
-			<div class="container">
-						<div class="row">
-					<div class="col-md-12">
-						<div class="aligncenter"><h2 class="aligncenter">Articles</h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus ovident, doloribus omnis minus temporibus perferendis nesciunt..</div>
-						<br/>
+
+	<div class="container">
+		<div class="row">
+	<div class="col-md-12">
+		<div class="aligncenter"><h2 class="aligncenter">Articles</h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus ovident, doloribus omnis minus temporibus perferendis nesciunt..</div>
+		<br/>
+	</div>
+	</div>
+
+	</div>
+
+	<section style="margin-left:40px;margin-right:40px;">
+	<div class= "wrapper">
+			<div class="owl-carousel owl-theme" style="padding-left: 30px;padding-right: 30px;padding-top:30px;background-color: #ef801a;">
+				<div class= "item2">
+					<div class="abc">
+					<div class="tutorial-card-tile">
+						<a class="base-card" href="#">
+							<div class="ui-card ui-layer-2 active-card">
+								<h5 class="ui-title text-sec-headline-xs"> Article 1</h5>
+								<div class="card-content">
+								<div class = "base-card-detail text-content">
+									<div>
+										<div class="tutorial-content text-content">
+											<div class="LinesEllipsis">
+												"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+												sed diam nonumy eirmod tempor invidunt ut labore et dolore
+													magna aliquyam erat, sed diam voluptua. At vero eos et 
+
+												<wbr>
+
+											</div>
+										</div>
+										<div class="start-tutorial bold"  data-toggle="modal" data-target="#view">View</div>
+									</div>	
+								</div>
+								</div> 
+							</div>
+
+						</a>
+					</div>
 					</div>
 				</div>
-				
-			</div>
-		
-				<section style="margin-left:40px;margin-right:40px;">
-					<div class= "wrapper">
-							<div class="owl-carousel owl-theme" style="padding-left: 30px;padding-right: 30px;padding-top:30px;background-color: #ef801a;">
-								<div class= "item2">
-									<div class="abc">
+
+				<div class= "item2">
+						<div class="tutorial-card-tile">
+							<a class="base-card" href="#">
+								<div class="ui-card ui-layer-2 active-card">
+									<h5 class="ui-title text-sec-headline-xs"> Article 1</h5>
+									<div class="card-content">
+									<div class = "base-card-detail text-content">
+										<div>
+											<div class="tutorial-content text-content">
+												<div class="LinesEllipsis">
+													"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+													sed diam nonumy eirmod tempor invidunt ut labore et dolore
+														magna aliquyam erat, sed diam voluptua. At vero eos et 
+
+													<wbr>
+
+												</div>
+											</div>
+											<div class="start-tutorial bold"  data-toggle="modal" data-target="#view">View</div>
+										</div>	
+									</div>
+									</div> 
+								</div>
+
+							</a>
+						</div>
+					</div>
+
+
+					<div class= "item2">
+							<div class="tutorial-card-tile">
+								<a class="base-card" href="#">
+									<div class="ui-card ui-layer-2 active-card">
+										<h5 class="ui-title text-sec-headline-xs"> Article 1</h5>
+										<div class="card-content">
+										<div class = "base-card-detail text-content">
+											<div>
+												<div class="tutorial-content text-content">
+													<div class="LinesEllipsis">
+														"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+														sed diam nonumy eirmod tempor invidunt ut labore et dolore
+															magna aliquyam erat, sed diam voluptua. At vero eos et 
+
+														<wbr>
+
+													</div>
+												</div>
+												<div class="start-tutorial bold"  data-toggle="modal" data-target="#view">View</div>
+											</div>	
+										</div>
+										</div> 
+									</div>
+
+								</a>
+							</div>
+						</div>
+
+
+
+						<div class= "item2">
+								<div class="tutorial-card-tile">
+									<a class="base-card" href="#">
+										<div class="ui-card ui-layer-2 active-card">
+											<h5 class="ui-title text-sec-headline-xs"> Article 1</h5>
+											<div class="card-content">
+											<div class = "base-card-detail text-content">
+												<div>
+													<div class="tutorial-content text-content">
+														<div class="LinesEllipsis">
+															"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+															sed diam nonumy eirmod tempor invidunt ut labore et dolore
+																magna aliquyam erat, sed diam voluptua. At vero eos et 
+
+															<wbr>
+
+														</div>
+													</div>
+													<div class="start-tutorial bold"  data-toggle="modal" data-target="#view">View</div>
+												</div>	
+											</div>
+											</div> 
+										</div>
+
+									</a>
+								</div>
+							</div>
+
+
+
+							<div class= "item2">
 									<div class="tutorial-card-tile">
 										<a class="base-card" href="#">
 											<div class="ui-card ui-layer-2 active-card">
@@ -557,13 +688,13 @@
 															<div class="LinesEllipsis">
 																"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
 																sed diam nonumy eirmod tempor invidunt ut labore et dolore
-																 magna aliquyam erat, sed diam voluptua. At vero eos et 
+																	magna aliquyam erat, sed diam voluptua. At vero eos et 
 
 																<wbr>
 
 															</div>
 														</div>
-														<div class="start-tutorial bold">View</div>
+														<div class="start-tutorial bold"  data-toggle="modal" data-target="#view">View</div>
 													</div>	
 												</div>
 												</div> 
@@ -571,8 +702,8 @@
 
 										</a>
 									</div>
-									</div>
 								</div>
+
 
 								<div class= "item2">
 										<div class="tutorial-card-tile">
@@ -586,279 +717,236 @@
 																<div class="LinesEllipsis">
 																	"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
 																	sed diam nonumy eirmod tempor invidunt ut labore et dolore
-																	 magna aliquyam erat, sed diam voluptua. At vero eos et 
-	
+																		magna aliquyam erat, sed diam voluptua. At vero eos et 
+
 																	<wbr>
-	
+
 																</div>
 															</div>
-															<div class="start-tutorial bold">View</div>
+															<div class="start-tutorial bold"  data-toggle="modal" data-target="#view">View</div>
 														</div>	
 													</div>
 													</div> 
 												</div>
-	
+
 											</a>
 										</div>
 									</div>
+					
+			</div>
+	</div>
+	</section>
+	</section>
 
+	<section id="content" style="margin-bottom: 30px;">
 
-									<div class= "item2">
-											<div class="tutorial-card-tile">
-												<a class="base-card" href="#">
-													<div class="ui-card ui-layer-2 active-card">
-														<h5 class="ui-title text-sec-headline-xs"> Article 1</h5>
-														<div class="card-content">
-														<div class = "base-card-detail text-content">
-															<div>
-																<div class="tutorial-content text-content">
-																	<div class="LinesEllipsis">
-																		"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-																		sed diam nonumy eirmod tempor invidunt ut labore et dolore
-																		 magna aliquyam erat, sed diam voluptua. At vero eos et 
+	<div class="container">
+				<div class="row">
+			<div class="col-md-12">
+				<div class="aligncenter"><h2 class="aligncenter">Challenges</h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus ovident, doloribus omnis minus temporibus perferendis nesciunt..</div>
+				<br/>
+			</div>
+		</div>
 		
-																		<wbr>
-		
-																	</div>
-																</div>
-																<div class="start-tutorial bold">View</div>
-															</div>	
-														</div>
-														</div> 
-													</div>
-		
-												</a>
+	</div>
+	<section style="margin-left:40px;margin-right:40px;margin:bottom">
+			<div class= "wrapper">
+					<div class="owl-carousel owl-theme" style="padding-left: 30px;padding-right: 30px;padding-top:30px;background-color: #ef801a;">
+					<div class="item2">
+							<div class="tutorial-card-tile">
+						<div class="skill-progress-card card-box">
+							<div class="ui-card ui-layer-2 active-card">
+								<h5 class="ui-title text-sec-headline-xs">Challenge 1</h5>
+								<div class="card-content">
+									<h3 class="base-card-title" title="Solve It">Solve It</h3>
+									<div class="base-card-detail text-content">
+										<div class="skill-progress-bar">
+											<div class="ui-progress-bar progress-bar theme-m">
+												<div class="progress-filler" style="width:0%">
+												</div>
+											</div> 
+											<div class="progress-count text-content">
+												<span class="points-secured">(0 out of5)</span>
 											</div>
 										</div>
-
-
-
-										<div class= "item2">
-												<div class="tutorial-card-tile">
-													<a class="base-card" href="#">
-														<div class="ui-card ui-layer-2 active-card">
-															<h5 class="ui-title text-sec-headline-xs"> Article 1</h5>
-															<div class="card-content">
-															<div class = "base-card-detail text-content">
-																<div>
-																	<div class="tutorial-content text-content">
-																		<div class="LinesEllipsis">
-																			"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-																			sed diam nonumy eirmod tempor invidunt ut labore et dolore
-																			 magna aliquyam erat, sed diam voluptua. At vero eos et 
-			
-																			<wbr>
-			
-																		</div>
-																	</div>
-																	<div class="start-tutorial bold">View</div>
-																</div>	
-															</div>
-															</div> 
-														</div>
-			
-													</a>
-												</div>
-											</div>
-
-
-
-											<div class= "item2">
-													<div class="tutorial-card-tile">
-														<a class="base-card" href="#">
-															<div class="ui-card ui-layer-2 active-card">
-																<h5 class="ui-title text-sec-headline-xs"> Article 1</h5>
-																<div class="card-content">
-																<div class = "base-card-detail text-content">
-																	<div>
-																		<div class="tutorial-content text-content">
-																			<div class="LinesEllipsis">
-																				"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-																				sed diam nonumy eirmod tempor invidunt ut labore et dolore
-																				 magna aliquyam erat, sed diam voluptua. At vero eos et 
-				
-																				<wbr>
-				
-																			</div>
-																		</div>
-																		<div class="start-tutorial bold">View</div>
-																	</div>	
-																</div>
-																</div> 
-															</div>
-				
-														</a>
-													</div>
-												</div>
-
-
-												<div class= "item2">
-														<div class="tutorial-card-tile">
-															<a class="base-card" href="#">
-																<div class="ui-card ui-layer-2 active-card">
-																	<h5 class="ui-title text-sec-headline-xs"> Article 1</h5>
-																	<div class="card-content">
-																	<div class = "base-card-detail text-content">
-																		<div>
-																			<div class="tutorial-content text-content">
-																				<div class="LinesEllipsis">
-																					"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-																					sed diam nonumy eirmod tempor invidunt ut labore et dolore
-																					 magna aliquyam erat, sed diam voluptua. At vero eos et 
-					
-																					<wbr>
-					
-																				</div>
-																			</div>
-																			<div class="start-tutorial bold">View</div>
-																		</div>	
-																	</div>
-																	</div> 
-																</div>
-					
-															</a>
-														</div>
-													</div>
-									
-							</div>
-					</div>
-					</section>
-			</section>
-	
-			<section id="content" style="margin-bottom: 40px;">
-	
-					<div class="container">
-								<div class="row">
-							<div class="col-md-12">
-								<div class="aligncenter"><h2 class="aligncenter">Challenges</h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus ovident, doloribus omnis minus temporibus perferendis nesciunt..</div>
-								<br/>
-							</div>
-						</div>
-						
-					</div>
-					<section style="margin-left:40px;margin-right:40px;">
-							<div class= "wrapper">
-									<div class="owl-carousel owl-theme" style="padding-left: 30px;padding-right: 30px;padding-top:30px;background-color: #ef801a;">
-									<div class="item2">
-											<div class="tutorial-card-tile">
-										<div class="skill-progress-card card-box">
-											<div class="ui-card ui-layer-2 active-card">
-												<h5 class="ui-title text-sec-headline-xs">Challenge 1</h5>
-												<div class="card-content">
-													<h3 class="base-card-title" title="Solve It">Solve It</h3>
-													<div class="base-card-detail text-content">
-														<div class="skill-progress-bar">
-															<div class="ui-progress-bar progress-bar theme-m">
-																<div class="progress-filler" style="width:0%">
-																</div>
-															</div> 
-															<div class="progress-count text-content">
-																<span class="points-secured">(0 out of5)</span>
-															</div>
-														</div>
-													</div>
-													<button class="ui-btn ui-btn-large ui-btn-line-primary" tabindex="0">
-														<div class="ui-content align-content-left">
-															<span class="ui-text">Take Challenge</span>
-														</div>
-													</button>
-												</div>
-											</div>  
-										</div>
-										</div>
-											</div>
-
-											<div class="item2">
-													<div class="skill-progress-card card-box">
-														<div class="ui-card ui-layer-2 active-card">
-															<h5 class="ui-title text-sec-headline-xs">Challenge 1</h5>
-															<div class="card-content">
-																<h3 class="base-card-title" title="Solve It">Solve It</h3>
-																<div class="base-card-detail text-content">
-																	<div class="skill-progress-bar">
-																		<div class="ui-progress-bar progress-bar theme-m">
-																			<div class="progress-filler" style="width:0%">
-																			</div>
-																		</div> 
-																		<div class="progress-count text-content">
-																			<span class="points-secured">(0 out of5)</span>
-																		</div>
-																	</div>
-																</div>
-																<button class="ui-btn ui-btn-large ui-btn-line-primary" tabindex="0">
-																	<div class="ui-content align-content-left">
-																		<span class="ui-text">Take Challenge</span>
-																	</div>
-																</button>
-															</div>
-														</div>  
-													</div>
-														</div>
-
-														<div class="item2">
-																<div class="skill-progress-card card-box">
-																	<div class="ui-card ui-layer-2 active-card">
-																		<h5 class="ui-title text-sec-headline-xs">Challenge 1</h5>
-																		<div class="card-content">
-																			<h3 class="base-card-title" title="Solve It">Solve It</h3>
-																			<div class="base-card-detail text-content">
-																				<div class="skill-progress-bar">
-																					<div class="ui-progress-bar progress-bar theme-m">
-																						<div class="progress-filler" style="width:0%">
-																						</div>
-																					</div> 
-																					<div class="progress-count text-content">
-																						<span class="points-secured">(0 out of5)</span>
-																					</div>
-																				</div>
-																			</div>
-																			<button class="ui-btn ui-btn-large ui-btn-line-primary" tabindex="0">
-																				<div class="ui-content align-content-left">
-																					<span class="ui-text">Take Challenge</span>
-																				</div>
-																			</button>
-																		</div>
-																	</div>  
-																</div>
-																	</div>
-
-
-																	<div class="item2">
-																			<div class="skill-progress-card card-box">
-																				<div class="ui-card ui-layer-2 active-card">
-																					<h5 class="ui-title text-sec-headline-xs">Challenge 1</h5>
-																					<div class="card-content">
-																						<h3 class="base-card-title" title="Solve It">Solve It</h3>
-																						<div class="base-card-detail text-content">
-																							<div class="skill-progress-bar">
-																								<div class="ui-progress-bar progress-bar theme-m">
-																									<div class="progress-filler" style="width:0%">
-																									</div>
-																								</div> 
-																								<div class="progress-count text-content">
-																									<span class="points-secured">(0 out of5)</span>
-																								</div>
-																							</div>
-																						</div>
-																						<button class="ui-btn ui-btn-large ui-btn-line-primary" tabindex="0">
-																							<div class="ui-content align-content-left">
-																								<span class="ui-text">Take Challenge</span>
-																							</div>
-																						</button>
-																					</div>
-																				</div>  
-																			</div>
-																				</div>		
-
 									</div>
+									<button class="ui-btn ui-btn-large ui-btn-line-primary" tabindex="0">
+										<div class="ui-content align-content-left">
+											<span class="ui-text">Take Challenge</span>
+										</div>
+									</button>
+								</div>
+							</div>  
+						</div>
+						</div>
 							</div>
-							</section>
-					</section>
+
+							<div class="item2">
+									<div class="skill-progress-card card-box">
+										<div class="ui-card ui-layer-2 active-card">
+											<h5 class="ui-title text-sec-headline-xs">Challenge 1</h5>
+											<div class="card-content">
+												<h3 class="base-card-title" title="Solve It">Solve It</h3>
+												<div class="base-card-detail text-content">
+													<div class="skill-progress-bar">
+														<div class="ui-progress-bar progress-bar theme-m">
+															<div class="progress-filler" style="width:0%">
+															</div>
+														</div> 
+														<div class="progress-count text-content">
+															<span class="points-secured">(0 out of5)</span>
+														</div>
+													</div>
+												</div>
+												<button class="ui-btn ui-btn-large ui-btn-line-primary" tabindex="0">
+													<div class="ui-content align-content-left">
+														<span class="ui-text">Take Challenge</span>
+													</div>
+												</button>
+											</div>
+										</div>  
+									</div>
+										</div>
+
+					<div class="item2">
+							<div class="skill-progress-card card-box">
+								<div class="ui-card ui-layer-2 active-card">
+									<h5 class="ui-title text-sec-headline-xs">Challenge 1</h5>
+									<div class="card-content">
+										<h3 class="base-card-title" title="Solve It">Solve It</h3>
+										<div class="base-card-detail text-content">
+											<div class="skill-progress-bar">
+												<div class="ui-progress-bar progress-bar theme-m">
+													<div class="progress-filler" style="width:0%">
+													</div>
+												</div> 
+												<div class="progress-count text-content">
+													<span class="points-secured">(0 out of5)</span>
+												</div>
+											</div>
+										</div>
+										<button class="ui-btn ui-btn-large ui-btn-line-primary" tabindex="0">
+											<div class="ui-content align-content-left">
+												<span class="ui-text">Take Challenge</span>
+											</div>
+										</button>
+									</div>
+								</div>  
+							</div>
+								</div>
+
+
+							<div class="item2">
+									<div class="skill-progress-card card-box">
+										<div class="ui-card ui-layer-2 active-card">
+											<h5 class="ui-title text-sec-headline-xs">Challenge 1</h5>
+											<div class="card-content">
+												<h3 class="base-card-title" title="Solve It">Solve It</h3>
+												<div class="base-card-detail text-content">
+													<div class="skill-progress-bar">
+														<div class="ui-progress-bar progress-bar theme-m">
+															<div class="progress-filler" style="width:0%">
+															</div>
+														</div> 
+														<div class="progress-count text-content">
+															<span class="points-secured">(0 out of5)</span>
+														</div>
+													</div>
+												</div>
+												<button class="ui-btn ui-btn-large ui-btn-line-primary" tabindex="0">
+													<div class="ui-content align-content-left">
+														<span class="ui-text">Take Challenge</span>
+													</div>
+												</button>
+											</div>
+										</div>  
+									</div>
+										</div>		
+
+					</div>
+			</div>
+			</section>
+	</section>
+
+	<!-- Modal -->
+	<div class="modal fade" id="view" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="container">
+
+							<div class="row">
+				
+								<!-- Post Content Column -->
+								<div>
+				
+									<!-- Title -->
+									<h1>Post Title</h1>
+				
+									<!-- Author -->
+									<p class="lead">
+										by
+										<a href="#">Name Of the Mentor</a>
+									</p>
+				
+									<hr>
+				
+									<!-- Date/Time -->
+									<p>Posted on January 1, 2018 at 12:00 PM</p>
+				
+									<hr>
+				
+									<!-- Preview Image -->
+									<img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+				
+									<hr>
+				
+									<!-- Post Content -->
+									<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
+				
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
+				
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
+				
+									<blockquote class="blockquote">
+										<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+										<footer class="blockquote-footer">Someone famous in
+											<cite title="Source Title">Source Title</cite>
+										</footer>
+									</blockquote>
+				
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>
+				
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>
+				
+									<hr>
+				
+								
+				
+							</div>
+							<!-- /.row -->
+				
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+
 					
 					
 
 	<footer>
-	<div class="container">
+	<div class="container" style="margin-top:20px;">
 		<div class="row">
 			<div class="col-lg-3">
 				<div class="widget">

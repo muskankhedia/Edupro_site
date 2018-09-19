@@ -13,6 +13,7 @@
 <link href="/stylesheets/flexslider.css" rel="stylesheet" />
 <link href="/stylesheets/style.css" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="stylesheets/blog-post.css" rel="stylesheet">
  
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -73,6 +74,10 @@ small {
     font-size: 80%;
     font-weight: 400;
 }
+
+.modal-dialog{
+        width: 80%;
+}
 </style>
 </head>
 
@@ -127,11 +132,21 @@ small {
 		  <a class="nav-link" href="/resources">Courses</a>
 		</li>
 		<li class="nav-item active">
-		  <a class="nav-link" href="/resources/articles">Articles</a>
+		  <a class="nav-link" href="#Articles">Articles</a>
 		</li>
 		
 	  </ul>
-     <section id="Courses">
+     <section id="Articles">
+
+				<div class="container">
+						<div class="row">
+					<div class="col-md-12">
+						<div class="aligncenter"><h2 class="aligncenter">Articles</h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis minus ovident, doloribus omnis minus temporibus perferendis nesciunt..</div>
+						<br/>
+					</div>
+				</div>
+
+
 	  <div class="container">
 
 		<div class="row">
@@ -142,7 +157,7 @@ small {
 				<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 				<div class="d-flex justify-content-between align-items-center">
 				  <div class="btn-group">
-					<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+					<button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#article">View</button>
 				  </div>
 				  <small class="text-muted">9 mins</small>
 				</div>
@@ -156,7 +171,7 @@ small {
 				<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 				<div class="d-flex justify-content-between align-items-center">
 				  <div class="btn-group">
-					<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+					<button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#article">View</button>
 				  </div>
 				  <small class="text-muted">9 mins</small>
 				</div>
@@ -170,7 +185,7 @@ small {
 				<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 				<div class="d-flex justify-content-between align-items-center">
 				  <div class="btn-group">
-					<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+					<button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#article">View</button>
 				  </div>
 				  <small class="text-muted">9 mins</small>
 				</div>
@@ -184,7 +199,7 @@ small {
 				<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 				<div class="d-flex justify-content-between align-items-center">
 				  <div class="btn-group">
-					<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+					<button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#article">View</button>
 				  </div>
 				  <small class="text-muted">9 mins</small>
 				</div>
@@ -201,7 +216,7 @@ small {
 				<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 				<div class="d-flex justify-content-between align-items-center">
 				  <div class="btn-group">
-					<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+					<button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#article">View</button>
 				  </div>
 				  <small class="text-muted">9 mins</small>
 				</div>
@@ -217,7 +232,7 @@ small {
 				<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 				<div class="d-flex justify-content-between align-items-center">
 				  <div class="btn-group">
-					<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+					<button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#article">View</button>
 				  </div>
 				  <small class="text-muted">9 mins</small>
 				</div>
@@ -236,7 +251,7 @@ small {
 					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 					  <div class="d-flex justify-content-between align-items-center">
 						<div class="btn-group">
-						  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+						  <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#article">View</button>
 						</div>
 						<small class="text-muted">9 mins</small>
 					  </div>
@@ -250,7 +265,7 @@ small {
 					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 					  <div class="d-flex justify-content-between align-items-center">
 						<div class="btn-group">
-						  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+						  <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#article" >View</button>
 						</div>
 						<small class="text-muted">9 mins</small>
 					  </div>
@@ -264,7 +279,7 @@ small {
 					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 					  <div class="d-flex justify-content-between align-items-center">
 						<div class="btn-group">
-						  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+						  <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#article">View</button>
 						</div>
 						<small class="text-muted">9 mins</small>
 					  </div>
@@ -278,7 +293,7 @@ small {
 					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 					  <div class="d-flex justify-content-between align-items-center">
 						<div class="btn-group">
-						  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+						  <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#article">View</button>
 						</div>
 						<small class="text-muted">9 mins</small>
 					  </div>
@@ -295,7 +310,7 @@ small {
 					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 					  <div class="d-flex justify-content-between align-items-center">
 						<div class="btn-group">
-						  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+						  <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#article">View</button>
 						</div>
 						<small class="text-muted">9 mins</small>
 					  </div>
@@ -311,7 +326,7 @@ small {
 					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
 					  <div class="d-flex justify-content-between align-items-center">
 						<div class="btn-group">
-						  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+						  <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#article">View</button>
 						</div>
 						<small class="text-muted">9 mins</small>
 					  </div>
@@ -321,7 +336,81 @@ small {
 			  </div>
 			</div>
 		  </section>
-	  
+		
+			<!-- Modal -->
+			<div class="modal fade" id="article" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="container">
+	
+								<div class="row">
+					
+									<!-- Post Content Column -->
+									<div>
+					
+										<!-- Title -->
+										<h1>Post Title</h1>
+					
+										<!-- Author -->
+										<p class="lead">
+											by
+											<a href="#">Name Of the Mentor</a>
+										</p>
+					
+										<hr>
+					
+										<!-- Date/Time -->
+										<p>Posted on January 1, 2018 at 12:00 PM</p>
+					
+										<hr>
+					
+										<!-- Preview Image -->
+										<img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+					
+										<hr>
+					
+										<!-- Post Content -->
+										<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
+					
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
+					
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
+					
+										<blockquote class="blockquote">
+											<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+											<footer class="blockquote-footer">Someone famous in
+												<cite title="Source Title">Source Title</cite>
+											</footer>
+										</blockquote>
+					
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>
+					
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>
+					
+										<hr>
+					
+									
+					
+								</div>
+								<!-- /.row -->
+					
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+	
 	
 <!-- javascript
     ================================================== -->
