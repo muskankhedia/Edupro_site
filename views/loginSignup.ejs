@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -16,7 +17,7 @@
             <div class="col-md-6 col-md-offset-3">
                 <div class="panel panel-login">
                     <div class="panel-heading">
-                        <div class="row" style="margin-bottom: 30px;float: center;margin-left: 33%;">
+                        <div class="row" style="margin-bottom: 30px;float:center;margin-left: 33%;">
                             <a class="navbar-brand" href="index.html" style="color: #ef801a"><img src="/images/logo.png" alt="logo"/>Edupro</a>
                         </div>
                     </div>
@@ -36,12 +37,12 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-lg-12">
-                                <form id="login-form" action="https://phpoll.com/login/process" method="post" role="form" style="display: block;">
+                                <form id="login-form" action="/login" method="post" role="form" style="display: block;">
                                     <div class="form-group">
-                                        <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                                        <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                                        <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required>
                                     </div>
                                     <div class="form-group text-center">
                                         <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
@@ -69,9 +70,15 @@
                                     <div class="form-group">
                                         <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
                                     </div>
+
+                                    <div class="form-group">
+                                        <input type="password" name="password2" id="password2" tabindex="2" class="form-control" placeholder=" Confirm Password">
+                                    </div>
+
                                     <div class="form-group">
                                         <input type="text" name="institute" id="institute" tabindex="2" class="form-control" placeholder="Institute Name">
                                     </div>
+                                    
                                     <div class="form-group">
                                         <input type="text" name="git_link" id="git_link" tabindex="2" class="form-control" placeholder="Github Link">
                                     </div>

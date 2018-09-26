@@ -5,6 +5,7 @@ var path = require('path');
 var multer = require('multer'); //for image upload
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const passport = require('passport');
 
 var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/login');
@@ -14,6 +15,13 @@ var mentorRouter = require('./routes/mentor');
 var resources = require('./routes/resources');
 var challenges = require('./routes/challenges');
 
+//Passport config
+require('./config/passport')(passport);
+
+
+//Map global promise - get rid of warning
+mongoose.Promise = global.Promise;
+
 //for mongo connection establishing
 mongoose.connect('mongodb://localhost/edupro');
 var db = mongoose.connection
@@ -21,6 +29,10 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
     console.log("connection established to db");
 });
+
+// require('/model/user');
+// const User = mongoose.model('User')
+
 
 var app = express();
 

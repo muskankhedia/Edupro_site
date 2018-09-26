@@ -13,9 +13,18 @@ var userSchema = new Schema({
   image: String
 },{ collection:'Users'});
 
+
+
 // the schema is useless so far
 // we need to create a model using it
-var User = mongoose.model('User', userSchema);
+var User = mongoose.model('Users', userSchema);
+
+
+// Users.create({name: Admin, password:admin}, function(err, doc) {
+//   // At this point the jobs collection is created.
+
+// });
+
 
 // make this available to our users in our Node applications
 module.exports = User;
